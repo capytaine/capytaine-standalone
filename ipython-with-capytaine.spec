@@ -17,6 +17,7 @@ a = Analysis(
             "capytaine.green_functions.libs.Delhommeau_float64",
             "capytaine.green_functions.libs.XieDelhommeau_float32",
             "capytaine.green_functions.libs.XieDelhommeau_float64",
+            "ipython",
             "matplotlib",
             "numpy",
             "pandas",
