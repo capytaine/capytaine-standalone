@@ -2,6 +2,9 @@
 
 import capytaine as cpt
 
+import xarray as xr
+xr.__version__ = "9999"  # https://github.com/pydata/xarray/issues/8200
+
 from traitlets.config import Config
 c = Config()
 c.InteractiveShellApp.exec_lines = [
