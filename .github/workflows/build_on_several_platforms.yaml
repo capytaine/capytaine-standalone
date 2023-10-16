@@ -13,17 +13,21 @@ jobs:
         os: [ubuntu-20.04, macos-11, windows-2019]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v3
         with:
           python-version: '3.10'
 
-      - run: pdm install && pdm bundle
+      - name: Create environment and build
+        run: pdm install && pdm bundle
 
-      - run: ./dist/ipython-with-capytaine --help
+      - name: Test
+        run: ./dist/ipython-with-capytaine --help
 
-      # - uses: actions/upload-artifact@v3
-      #   with:
-      #     path: ./dist/
+      - name: Upload build file
+        uses: actions/upload-artifact@v3
+        with:
+          path: ./dist/*
