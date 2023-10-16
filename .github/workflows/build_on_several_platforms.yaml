@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - run: pdm bundle
+      - run: pdm install && pdm bundle
 
       - run: ./dist/ipython-with-capytaine --help
 
