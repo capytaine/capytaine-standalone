@@ -19,4 +19,4 @@ license = {text = "GPL"}
 
 
 [tool.pdm.scripts]
-bundle = "pyinstaller --clean ipython-with-capytaine.spec"
+bundle = "pyinstaller --clean --noconfirm ipython-with-capytaine.spec"
