@@ -25,7 +25,7 @@ jobs:
         run: pdm install && pdm bundle
 
       - name: Test
-        run: ./dist/ipython-with-capytaine --help
+        run: ./dist/ipython-with-capytaine-* --help
 
       - name: Upload build file
         uses: actions/upload-artifact@v3
