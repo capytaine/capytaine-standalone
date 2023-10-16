@@ -1,5 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import sys
 
 block_cipher = None
 
@@ -48,7 +49,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='ipython-with-capytaine',
+    name='ipython-with-capytaine-' + sys.platform,
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
