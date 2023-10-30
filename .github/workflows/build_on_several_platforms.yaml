@@ -12,7 +12,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-20.04, macos-11, windows-2019]
+        include:
+          - os: ubuntu-20.04
+            file_extension: linux
+          - os: macos-11
+            file_extension: macos
+          - os: windows-2019
+            file_extension: windows.exe
 
     steps:
       - name: Checkout repository
@@ -27,7 +33,7 @@ jobs:
         run: pdm install && pdm bundle
 
       - name: Test
-        run: ./dist/ipython-with-capytaine-* --help
+        run: ./dist/ipython-with-capytaine-${{ matrix.file_extension }} --help
 
       - name: Upload build file
         uses: actions/upload-artifact@v3
@@ -41,6 +47,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dist/ipython-with-capytaine-*
-          asset_name: Executable
+          asset_path: ./dist/ipython-with-capytaine-${{ matrix.file_extension }}
+          asset_name: ipython-with-capytaine-${{ matrix.file_extension }}
           asset_content_type: application/octet-stream
