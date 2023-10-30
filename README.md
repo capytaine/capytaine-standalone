@@ -42,3 +42,6 @@ In [3]: %run radiation_cylinder.py
 
 - You cannot install other Python libraries in the bundled environment. If you have specific need, you will need to use `pip` or `conda` to install Capytaine in a virtual environment that you can customize.
 
+## Support
+
+Please report issues to [Capytaine's main issue tracker](https://github.com/capytaine/capytaine/issues) while mentionning `[capytaine-standalone]` in the issue title.
