@@ -1,5 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+import sys
+
+if sys.platform == "linux":
+    os_name = "linux"
+elif sys.platform == "darwin":
+    os_name = "macos"
+elif sys.platform == "win32":
+    os_name = "windows"
 
 block_cipher = None
 
@@ -48,7 +56,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='ipython-with-capytaine',
+    name='ipython-with-capytaine-' + os_name,
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
