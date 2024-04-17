@@ -1,6 +1,6 @@
 [project]
 name = "python-with-capytaine"
-version = "v2.0"
+version = "v2.1"
 description = "A standalone distribution of Capytaine with a Python interpreter"
 authors = [
     {name = "Matthieu Ancellin", email = "matthieu.ancellin@eurobios.com"},
