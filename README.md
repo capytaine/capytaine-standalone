@@ -23,7 +23,7 @@ In [1]: print("Hello world")
 Hello world
 
 In [2]: mesh = cpt.mesh_sphere()
-Out[2]: Mesh(nb_vertices=92, nb_faces=100, name=sphere_0)
+Out[2]: Mesh(vertices=[[... 92 vertices ...]], faces=[[... 100 faces ...]], name="sphere_0")
 ```
 
 To execute a whole Python script, you can pass it as argument to the command line
