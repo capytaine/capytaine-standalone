@@ -17,8 +17,9 @@ jobs:
             file_extension: linux
           - os: macos-11
             file_extension: macos
-          - os: windows-2019
+          - os: windows-2022
             file_extension: windows.exe
+      fail-fast: false  # Do not cancel all three builds when one fails
 
     steps:
       - name: Checkout repository
