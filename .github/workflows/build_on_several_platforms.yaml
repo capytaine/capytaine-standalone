@@ -36,7 +36,7 @@ jobs:
         run: ./dist/ipython-with-capytaine-${{ matrix.file_extension }} --help
 
       - name: Upload built files
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: wheels-${{ matrix.os }}
           path: ./wheelhouse/*.whl
