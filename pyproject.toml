@@ -1,12 +1,12 @@
 [project]
 name = "python-with-capytaine"
-version = "v2.1"
+version = "v2.2"
 description = "A standalone distribution of Capytaine with a Python interpreter"
 authors = [
     {name = "Matthieu Ancellin", email = "matthieu.ancellin@eurobios.com"},
 ]
 dependencies = [
-    "capytaine>=2.0",
+    "capytaine==2.2",
     "matplotlib>=3.8.0",
     "vtk>=9.2.6",
     "joblib>=1.3.2",
