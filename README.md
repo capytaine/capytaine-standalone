@@ -42,6 +42,8 @@ In [3]: %run radiation_cylinder.py
 
 - You cannot install other Python libraries in the bundled environment. If you have specific need, you will need to use `pip` or `conda` to install Capytaine in a virtual environment that you can customize.
 
+- On MacOS, the standalone version is only built for the ARM architecture (Apple Silicon processors), since Capytaine 2.2. Packages for the legacy MacOS Intel architecture are still available on `pip` or `conda`.
+
 ## Support
 
 Please report issues to [Capytaine's main issue tracker](https://github.com/capytaine/capytaine/issues) while mentionning `[capytaine-standalone]` in the issue title.
