@@ -15,8 +15,10 @@ jobs:
         include:
           - os: ubuntu-20.04
             file_extension: linux
-          - os: macos-11
-            file_extension: macos
+          - os: macos-12
+            file_extension: macos-intel
+          - os: macos-14
+            file_extension: macos-arm
           - os: windows-2022
             file_extension: windows.exe
       fail-fast: false  # Do not cancel all three builds when one fails
