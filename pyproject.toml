@@ -1,21 +1,21 @@
 [project]
 name = "python-with-capytaine"
-version = "v2.3.1"
+version = "v3.0"
 description = "A standalone distribution of Capytaine with a Python interpreter"
 authors = [
     {name = "Matthieu Ancellin", email = "matthieu.ancellin@mews-labs.com"},
 ]
 dependencies = [
-    "capytaine==2.3.1",
+    "capytaine==3.0",
     "matplotlib>=3",
     "vtk>=9",
     "joblib>=1.3.2",
     "pyinstaller>=4.10",
     "ipython>=8.15.0",
 ]
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.14,<3.15"
 readme = "README.md"
-license = {text = "GPL"}
+license = {text = "Apache-2.0"}
 
 
 [tool.pdm.scripts]

@@ -28,7 +28,7 @@ jobs:
       - name: Setup PDM
         uses: pdm-project/setup-pdm@v4
         with:
-          python-version: '3.12'
+          python-version: '3.14'
 
       - name: Create environment and build
         run: pdm install && pdm bundle
